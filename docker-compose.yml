@@ -1,0 +1,7 @@
+services:
+  getmail:
+    image: isync:1.5.1
+    volumes:
+      - "/volume1/docker/isync/data:/data"
+      - "/volume1/docker/isync/config:/config"
+    restart: always
