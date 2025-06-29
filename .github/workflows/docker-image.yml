@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build build --tag isync:1.5.1 --tag isync:latest
+      run: docker build build --tag ghcr.io/sebkoe/isync:1.5.1 --tag ghcr.io/sebkoe/isync:latest
     - name: Log in to registry
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
     - name: Push image
