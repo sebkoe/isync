@@ -1,5 +1,5 @@
 services:
-  getmail:
+  isync:
     image: isync:1.5.1
     volumes:
       - "/volume1/docker/isync/data:/data"
