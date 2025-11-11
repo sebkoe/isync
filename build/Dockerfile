@@ -24,7 +24,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get install -y db-util libsasl2-2 openssl zlib1g ca-certificates cron gosu && \
     mkdir /config && \
     mkdir /data && \
-    addgroup --gid 1000 sync \
+    addgroup --gid 1000 sync && \
     useradd --uid 1000 --gid paperless --home-dir /config sync
 
 WORKDIR /data
