@@ -1,7 +1,8 @@
 services:
   isync:
-    image: isync:1.5.1
+    image: ghcr.io/sebkoe/isync:1.5.1
+    env_file: docker-compose.env
     volumes:
-      - "/volume1/docker/isync/data:/data"
-      - "/volume1/docker/isync/config:/config"
+      - "./data:/data"
+      - "./config:/config"
     restart: always
