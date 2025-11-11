@@ -25,7 +25,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     mkdir /config && \
     mkdir /data && \
     addgroup --gid 1000 sync && \
-    useradd --uid 1000 --gid paperless --home-dir /config sync
+    useradd --uid 1000 --gid sync --home-dir /config sync
 
 WORKDIR /data
 VOLUME ["/config", "/data"]
