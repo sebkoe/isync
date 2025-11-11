@@ -23,7 +23,7 @@ ADD --chmod=755 entrypoint.sh /entrypoint.sh
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get install -y db-util libsasl2-2 openssl zlib1g ca-certificates cron gosu && \
     mkdir /config && \
-    mkdir /data && \
+    mkdir /data
 RUN addgroup --gid 1000 sync
 RUN useradd --uid 1000 --gid 1000 -M --home-dir /config sync
 
