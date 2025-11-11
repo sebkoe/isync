@@ -23,9 +23,9 @@ ADD --chmod=755 entrypoint.sh /entrypoint.sh
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get install -y db-util libsasl2-2 openssl zlib1g ca-certificates cron gosu && \
     mkdir /config && \
-    mkdir /data
-RUN addgroup --gid 1000 isync
-RUN useradd --uid 1000 --gid 1000 -M --home-dir /config isync
+    mkdir /data && \
+    addgroup --gid 1000 isync && \
+    useradd --uid 1000 --gid 1000 -M --home-dir /config isync
 
 WORKDIR /data
 VOLUME ["/config", "/data"]
